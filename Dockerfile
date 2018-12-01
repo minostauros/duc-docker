@@ -12,8 +12,9 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists/*
 
 # Install duc
+# /duc/db is a directory to mount multiple DBs, for server. duc_startup.sh look into this directory and create CGIs
 RUN mkdir /duc && \
-    mkdir /duc/db && \ # Directory to save multiple DBs, for server. duc_startup.sh look into this directory and create CGIs
+    mkdir /duc/db && \ 
     cd /duc && \
     wget https://github.com/zevv/duc/releases/download/1.4.4/duc-1.4.4.tar.gz && \
     tar xzf duc-1.4.4.tar.gz && \
