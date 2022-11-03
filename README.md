@@ -1,5 +1,5 @@
 # duc-docker
-[![Docker Automated build](https://img.shields.io/docker/automated/tigerdockermediocore/duc-docker.svg)](https://hub.docker.com/r/tigerdockermediocore/duc-docker) [![Docker Build Status](https://img.shields.io/docker/build/tigerdockermediocore/duc-docker.svg)](https://hub.docker.com/r/tigerdockermediocore/duc-docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/tigerdockermediocore/duc-docker) [![Automated build on Github Actions](https://github.com/minostauros/duc-docker/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/minostauros/duc-docker/pkgs/container/duc-docker)
 
 Dockerized version of [duc](https://duc.zevv.nl), a disk usage analyzer.
 See [docker hub](https://hub.docker.com/r/tigerdockermediocore/duc-docker/) to pull the images.
