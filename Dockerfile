@@ -16,18 +16,19 @@ RUN apt-get update -qq && \
 RUN mkdir /duc && \
     mkdir /duc/db && \ 
     cd /duc && \
-    wget https://github.com/zevv/duc/releases/download/1.4.4/duc-1.4.4.tar.gz && \
-    tar xzf duc-1.4.4.tar.gz && \
-    rm duc-1.4.4.tar.gz && \
-    cd duc-1.4.4 && \
+    wget https://github.com/zevv/duc/releases/download/1.4.5/duc-1.4.5.tar.gz && \
+    tar xzf duc-1.4.5.tar.gz && \
+    rm duc-1.4.5.tar.gz && \
+    cd duc-1.4.5 && \
     ./configure && \ 
     make && \
     make install && \
     cd .. && \
-    rm -rf duc-1.4.4
+    rm -rf duc-1.4.5
 
 COPY assets/index.cgi /var/www/duc/
 COPY assets/000-default.conf /etc/apache2/sites-available/
+COPY assets/ducrc /etc/
 COPY assets/duc_startup.sh /duc/
 
 #create a starter database so that we can set permissions for cgi access
