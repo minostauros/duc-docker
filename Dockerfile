@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 MAINTAINER minostauros <6764739+minostauros@users.noreply.github.com>
 
 # Set correct environment variables
