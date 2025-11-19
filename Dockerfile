@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 MAINTAINER minostauros <6764739+minostauros@users.noreply.github.com>
 
 # Set correct environment variables
@@ -16,15 +16,15 @@ RUN apt-get update -qq && \
 RUN mkdir /duc && \
     mkdir /duc/db && \ 
     cd /duc && \
-    wget https://github.com/zevv/duc/releases/download/1.4.5/duc-1.4.5.tar.gz && \
-    tar xzf duc-1.4.5.tar.gz && \
-    rm duc-1.4.5.tar.gz && \
-    cd duc-1.4.5 && \
+    wget https://github.com/zevv/duc/releases/download/1.4.6/duc-1.4.6.tar.gz && \
+    tar xzf duc-1.4.6.tar.gz && \
+    rm duc-1.4.6.tar.gz && \
+    cd duc-1.4.6 && \
     ./configure && \ 
     make && \
     make install && \
     cd .. && \
-    rm -rf duc-1.4.5
+    rm -rf duc-1.4.6
 
 COPY assets/index.cgi /var/www/duc/
 COPY assets/000-default.conf /etc/apache2/sites-available/
